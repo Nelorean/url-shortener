@@ -19,6 +19,7 @@ const shortenUrl = async (req, res) => {
       clicks: url.clicks
     })
   } catch (error) {
+    
     res.status(500).json({ message: 'Erro ao encurtar URL' })
   }
 }
@@ -63,4 +64,4 @@ const getStats = async (req,res) =>{
   }
 }
 
-module.exports = {shortenUrl, redirectUrl, getStats}
+module.exports = { shortenUrl, redirectUrl, getStats }
