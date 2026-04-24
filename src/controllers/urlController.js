@@ -19,8 +19,8 @@ const shortenUrl = async (req, res) => {
       clicks: url.clicks
     })
   } catch (error) {
-    
-    res.status(500).json({ message: 'Erro ao encurtar URL' })
+    console.log(error);
+        res.status(500).json({ message: 'Erro ao encurtar URL' })
   }
 }
 
