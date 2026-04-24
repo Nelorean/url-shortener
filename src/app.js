@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use('/',urlRoutes)
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI)
   .then(()=> console.log('MongoDB conectado!'))
   .catch((err)=>console.error('Erro ao conectar',err))
 
